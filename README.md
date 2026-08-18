@@ -13,8 +13,8 @@ Create `.env.local` with:
 
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_project_url
-SUPABASE_SERVICE_ROLE_KEY=your_server_only_service_role_key
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_publishable_key
 ```
 
-The service-role key is used only by the server-side inquiry endpoint and must never be exposed to browser code.
+The inquiry table uses row-level security: visitors may submit validated inquiries but cannot read, update or delete records.
 
